@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra nuestra exclusiva carta gourmet con platos de autor, vinos premium y postres artesanales.">
+    <title>Carta Gourmet - Sabor & Brasa</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍷</text></svg>">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-crema">
+
+    <!-- ========================================
+         PRELOADER
+    ======================================== -->
+    <div id="preloader">
+        <div class="loader-content text-center">
+            <div class="spinner-border text-gold" role="status" style="width: 3rem; height: 3rem; border-width: 0.1rem;">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <p class="mt-4 fw-light text-uppercase small loader-text" style="letter-spacing: 5px;">Sabor & Brasa</p>
+        </div>
+    </div>
+
+    <!-- ========================================
+         NAVIGATION
+    ======================================== -->
+    <nav class="navbar navbar-expand-lg fixed-top nav-glass-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html" style="font-family: 'Playfair Display', serif;">
+                S&<span class="text-gold">B</span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="menu.html">Carta</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html#nosotros">Nosotros</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-gold btn-pill px-4 py-2" href="reservas.html">RESERVAR MESA</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         MENU HERO
+    ======================================== -->
+    <header class="menu-hero d-flex align-items-center position-relative">
+        <div class="overlay-dark"></div>
+        <div class="container text-center position-relative text-white">
+            <span class="badge-gourmet mb-3" data-aos="fade-down">Cocina de Autor</span>
+            <h1 class="display-2 fw-bold mb-4" data-aos="zoom-in" data-aos-delay="200" style="font-family: 'Playfair Display', serif;">
+                Nuestra <span class="text-gold italic">Carta</span>
+            </h1>
+            <p class="lead mb-0 opacity-75 mx-auto" style="max-width: 600px;" data-aos="fade-up" data-aos-delay="400">
+                Una selección cuidadosa de platos creados con ingredientes de temporada y técnicas contemporáneas
+            </p>
+        </div>
+    </header>
+
+    <!-- ========================================
+         MENU CONTENT
+    ======================================== -->
+    <section class="py-5">
+        <div class="container py-lg-5">
+            <!-- Menu Navigation -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <nav class="menu-nav">
+                    <a href="#" class="nav-link active" data-category="todos">Todos</a>
+                    <a href="#" class="nav-link" data-category="entradas">Entradas</a>
+                    <a href="#" class="nav-link" data-category="fondos">Fondos</a>
+                    <a href="#" class="nav-link" data-category="postres">Postres</a>
+                    <a href="#" class="nav-link" data-category="bebidas">Bebidas</a>
+                </nav>
+            </div>
+
+            <!-- ENTRADAS -->
+            <div class="menu-section" data-category="entradas">
+                <div class="mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-2" style="font-family: 'Playfair Display', serif;">
+                        <i class="fas fa-leaf text-gold me-3"></i>Entradas
+                    </h2>
+                    <div class="divider-gold" style="margin: 1rem 0;"></div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up">
+                    <div class="menu-item-content">
+                        <h4>Tartar de Atún Rojo</h4>
+                        <p>Dados de atún fresco con aguacate, sésamo tostado y vinagreta de jengibre. Acompañado de chips de camote.</p>
+                        <span class="menu-badge">Recomendado</span>
+                    </div>
+                    <div class="menu-item-price">S/ 58</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-content">
+                        <h4>Carpaccio de Res Angus</h4>
+                        <p>Láminas finas de res premium con parmesano, rúcula, alcaparras y reducción de vinagre balsámico.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 52</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-item-content">
+                        <h4>Pulpo a la Brasa</h4>
+                        <p>Tentáculos de pulpo grillado sobre puré de papa amarilla, paprika ahumada y aceite de ajo negro.</p>
+                        <span class="menu-badge">Chef's Special</span>
+                    </div>
+                    <div class="menu-item-price">S/ 68</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="menu-item-content">
+                        <h4>Vieiras Gratinadas</h4>
+                        <p>Vieiras frescas al gratín con mantequilla de hierbas, parmesano y un toque de pisco.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 72</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="menu-item-content">
+                        <h4>Ensalada de Burrata</h4>
+                        <p>Burrata cremosa sobre lecho de tomates heirloom, albahaca fresca y reducción de aceto balsámico.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 48</div>
+                </div>
+            </div>
+
+            <!-- FONDOS -->
+            <div class="menu-section mt-5" data-category="fondos">
+                <div class="mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-2" style="font-family: 'Playfair Display', serif;">
+                        <i class="fas fa-fire text-gold me-3"></i>Fondos
+                    </h2>
+                    <div class="divider-gold" style="margin: 1rem 0;"></div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up">
+                    <div class="menu-item-content">
+                        <h4>Tomahawk Premium (900g)</h4>
+                        <p>Madurado 45 días, braseado a la leña con hierbas aromáticas. Acompañado de papas gratinadas y vegetales de temporada.</p>
+                        <span class="menu-badge">Especialidad</span>
+                        <span class="menu-badge">Para 2 personas</span>
+                    </div>
+                    <div class="menu-item-price">S/ 185</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-content">
+                        <h4>Lomo Saltado Gourmet</h4>
+                        <p>Reimaginación del clásico peruano con lomo angus, vegetales salteados, papas criollas y demi-glace de ají panca.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 78</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-item-content">
+                        <h4>Cordero Confitado</h4>
+                        <p>Paletilla de cordero cocción lenta 8 horas, puré de alcachofa trufado y salsa de malbec.</p>
+                        <span class="menu-badge">Recomendado</span>
+                    </div>
+                    <div class="menu-item-price">S/ 92</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="menu-item-content">
+                        <h4>Risotto de Funghi</h4>
+                        <p>Arroz carnaroli cremoso con variedad de hongos silvestres, parmesano reggiano y aceite de trufa negra.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 65</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="menu-item-content">
+                        <h4>Salmón Glaseado</h4>
+                        <p>Filete de salmón noruego glaseado con miel y mostaza, sobre quinoa negra y espárragos al ajillo.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 82</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="menu-item-content">
+                        <h4>Pato Laqueado</h4>
+                        <p>Magret de pato laqueado con salsa de frutos rojos, ñoquis de camote y reducción de oporto.</p>
+                        <span class="menu-badge">Chef's Special</span>
+                    </div>
+                    <div class="menu-item-price">S/ 95</div>
+                </div>
+            </div>
+
+            <!-- POSTRES -->
+            <div class="menu-section mt-5" data-category="postres">
+                <div class="mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-2" style="font-family: 'Playfair Display', serif;">
+                        <i class="fas fa-ice-cream text-gold me-3"></i>Postres
+                    </h2>
+                    <div class="divider-gold" style="margin: 1rem 0;"></div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up">
+                    <div class="menu-item-content">
+                        <h4>Esferas de Chocolate</h4>
+                        <p>Cacao 70% con corazón de frutos rojos y helado artesanal de vainilla de Madagascar. Servido con coulis de frambuesa.</p>
+                        <span class="menu-badge">Bestseller</span>
+                    </div>
+                    <div class="menu-item-price">S/ 42</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-content">
+                        <h4>Tarta de Limón Deconstruida</h4>
+                        <p>Cremoso de limón, crumble de mantequilla y merengue italiano flameado. Acompañado de sorbete de albahaca.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 38</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-item-content">
+                        <h4>Tiramisú de Autor</h4>
+                        <p>Versión contemporánea con bizcocho de café, mascarpone montado, amaretto y cacao venezolano.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 36</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="menu-item-content">
+                        <h4>Cheesecake de Lúcuma</h4>
+                        <p>Suave cheesecake de lúcuma peruana sobre base de galleta de quinua, salsa de caramelo y nueces pecanas.</p>
+                        <span class="menu-badge">Ingrediente Local</span>
+                    </div>
+                    <div class="menu-item-price">S/ 40</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="menu-item-content">
+                        <h4>Volcán de Chocolate</h4>
+                        <p>Coulant de chocolate belga con corazón fundido, servido con helado de vainilla y frutos del bosque.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 44</div>
+                </div>
+            </div>
+
+            <!-- BEBIDAS -->
+            <div class="menu-section mt-5" data-category="bebidas">
+                <div class="mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-2" style="font-family: 'Playfair Display', serif;">
+                        <i class="fas fa-wine-bottle text-gold me-3"></i>Bebidas
+                    </h2>
+                    <div class="divider-gold" style="margin: 1rem 0;"></div>
+                </div>
+
+                <!-- Vinos Tintos -->
+                <h5 class="mt-4 mb-3 text-gold fw-bold" data-aos="fade-up">Vinos Tintos</h5>
+                
+                <div class="menu-item" data-aos="fade-up">
+                    <div class="menu-item-content">
+                        <h4>Catena Zapata Malbec</h4>
+                        <p>Argentina - Mendoza. Cuerpo completo con notas de ciruela y vainilla.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 180</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-content">
+                        <h4>Château Margaux</h4>
+                        <p>Francia - Bordeaux. Elegante y refinado con taninos sedosos.</p>
+                        <span class="menu-badge">Premium</span>
+                    </div>
+                    <div class="menu-item-price">S/ 850</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-item-content">
+                        <h4>Tabali Reserva Especial</h4>
+                        <p>Chile - Valle del Limarí. Cabernet Sauvignon con carácter único.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 120</div>
+                </div>
+
+                <!-- Vinos Blancos -->
+                <h5 class="mt-5 mb-3 text-gold fw-bold" data-aos="fade-up">Vinos Blancos</h5>
+                
+                <div class="menu-item" data-aos="fade-up">
+                    <div class="menu-item-content">
+                        <h4>Cloudy Bay Sauvignon Blanc</h4>
+                        <p>Nueva Zelanda - Marlborough. Fresco y aromático con notas cítricas.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 160</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-content">
+                        <h4>Chablis Grand Cru</h4>
+                        <p>Francia - Borgoña. Chardonnay mineral y elegante.</p>
+                        <span class="menu-badge">Recomendado</span>
+                    </div>
+                    <div class="menu-item-price">S/ 220</div>
+                </div>
+
+                <!-- Cocteles -->
+                <h5 class="mt-5 mb-3 text-gold fw-bold" data-aos="fade-up">Cocteles de Autor</h5>
+                
+                <div class="menu-item" data-aos="fade-up">
+                    <div class="menu-item-content">
+                        <h4>Pisco Sour Premium</h4>
+                        <p>Pisco acholado, limón fresco, jarabe natural, clara de huevo y bitters de angostura.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 32</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-content">
+                        <h4>Maracuyá Passion</h4>
+                        <p>Vodka premium, licor de maracuyá, zumo de lima y toque de albahaca.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 35</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-item-content">
+                        <h4>Chilcano de Autor</h4>
+                        <p>Pisco quebranta, ginger ale artesanal, limón y hierbas aromáticas.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 28</div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="menu-item-content">
+                        <h4>Old Fashioned Premium</h4>
+                        <p>Bourbon añejo, azúcar demerara, bitters de angostura y cáscara de naranja.</p>
+                    </div>
+                    <div class="menu-item-price">S/ 38</div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-5 pt-5" data-aos="fade-up">
+                <p class="text-muted mb-4 fs-5">¿Listo para vivir una experiencia gastronómica única?</p>
+                <a href="reservas.html" class="btn btn-gold btn-pill px-5 py-3">
+                    <i class="fas fa-calendar-alt me-2"></i>RESERVAR MESA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h2 class="mb-4" style="font-family: 'Playfair Display', serif;">
+                        Sabor & <span class="text-gold">Brasa</span>
+                    </h2>
+                    <p class="small opacity-50 mb-4">
+                        Experiencia gastronómica de alto nivel en el corazón de Lima. 
+                        Cada plato es una celebración de sabores.
+                    </p>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="#" class="text-white opacity-50 hover-gold" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white opacity-50 hover-gold" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white opacity-50 hover-gold" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="text-white opacity-50 hover-gold" aria-label="TripAdvisor">
+                            <i class="fab fa-tripadvisor"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-3 text-gold">Navegación</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white opacity-50 hover-gold text-decoration-none small">Inicio</a></li>
+                        <li class="mb-2"><a href="menu.html" class="text-white opacity-50 hover-gold text-decoration-none small">Carta</a></li>
+                        <li class="mb-2"><a href="index.html#nosotros" class="text-white opacity-50 hover-gold text-decoration-none small">Nosotros</a></li>
+                        <li class="mb-2"><a href="reservas.html" class="text-white opacity-50 hover-gold text-decoration-none small">Reservas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-3 text-gold">Horarios</h5>
+                    <p class="small opacity-50 mb-2">Martes - Domingo</p>
+                    <p class="small opacity-50 mb-2">12:30 PM - 11:00 PM</p>
+                    <p class="small opacity-50">(Lunes cerrado)</p>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-3 text-gold">Ubicación</h5>
+                    <p class="small opacity-50 mb-2">Av. Gastronomía 789</p>
+                    <p class="small opacity-50 mb-2">San Borja, Lima</p>
+                    <p class="small opacity-50">Perú</p>
+                </div>
+            </div>
+            
+            <hr class="my-4 opacity-25">
+            
+            <div class="text-center">
+                <p class="small opacity-25 mb-0">
+                    &copy; 2026 Sabor & Brasa. Diseñado por <strong>Jean Avalos</strong> | Alta Gastronomía
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

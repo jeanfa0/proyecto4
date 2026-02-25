@@ -1,0 +1,721 @@
+/* ========================================
+   SABOR & BRASA - SOPHISTICATED RESTAURANT
+   Design System & Styles
+======================================== */
+
+:root {
+    /* Color Palette - Elegant & Luxurious */
+    --gold: #D4AF37;
+    --gold-light: #E8C76F;
+    --gold-dark: #B8941F;
+    --bronze: #8B6F47;
+    --black: #0D0D0D;
+    --charcoal: #1A1A1A;
+    --gray-dark: #2D2D2D;
+    --gray: #666666;
+    --cream: #F5F1E8;
+    --cream-dark: #E8E3D6;
+    --white: #FFFFFF;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    
+    /* Effects */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 20px 60px rgba(0, 0, 0, 0.12);
+    --shadow-strong: 0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   RESET & BASE STYLES
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--charcoal);
+    line-height: 1.7;
+    overflow-x: hidden;
+    background-color: var(--cream);
+}
+
+::selection {
+    background-color: var(--gold);
+    color: var(--white);
+}
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.text-gold {
+    color: var(--gold) !important;
+}
+
+.bg-crema {
+    background-color: var(--cream);
+}
+
+/* ========================================
+   PRELOADER
+======================================== */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--charcoal) 0%, var(--black) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    animation: fadeInUp 0.8s ease;
+}
+
+.loader-text {
+    color: var(--cream);
+    font-weight: 300;
+    animation: pulse 2s infinite;
+}
+
+.spinner-border {
+    border-color: var(--gold) transparent var(--gold) transparent !important;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.navbar {
+    padding: 1.5rem 0;
+    transition: var(--transition-smooth);
+    background: transparent;
+}
+
+.navbar.scrolled {
+    padding: 0.8rem 0;
+    background: rgba(13, 13, 13, 0.95) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nav-glass-dark {
+    background: rgba(13, 13, 13, 0.7);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.navbar-brand {
+    color: var(--cream) !important;
+    font-size: 2rem !important;
+    transition: var(--transition-smooth);
+    letter-spacing: 0.05em;
+}
+
+.navbar-brand:hover {
+    transform: translateY(-2px);
+    color: var(--gold) !important;
+}
+
+.nav-link {
+    color: var(--cream) !important;
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 2px;
+    background: var(--gold);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--gold) !important;
+}
+
+.nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(245, 241, 232, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.btn-gold {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    border: none;
+    color: var(--black);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+}
+
+.btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+    color: var(--black);
+}
+
+.btn-outline-light {
+    border: 2px solid var(--cream);
+    color: var(--cream);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+}
+
+.btn-outline-light:hover {
+    background: var(--cream);
+    color: var(--black);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(245, 241, 232, 0.3);
+}
+
+.btn-pill {
+    border-radius: 50px;
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero-restaurant {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920') center/cover no-repeat;
+    position: relative;
+    padding-top: 80px;
+}
+
+.overlay-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(13, 13, 13, 0.3), rgba(13, 13, 13, 0.8));
+    pointer-events: none;
+}
+
+.badge-gourmet {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid var(--gold);
+    border-radius: 50px;
+    color: var(--gold);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.hero-restaurant h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.hero-restaurant .lead {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 300;
+}
+
+/* ========================================
+   DIVIDERS & DECORATIONS
+======================================== */
+
+.divider-gold {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 1.5rem auto;
+}
+
+/* ========================================
+   DISH CARDS
+======================================== */
+
+.dish-card {
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.dish-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.dish-card:hover::before {
+    left: 100%;
+}
+
+.dish-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-strong);
+    border-color: var(--gold);
+}
+
+.dish-img-box {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dish-img-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.dish-card:hover .dish-img-box::after {
+    opacity: 1;
+}
+
+.dish-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dish-card:hover .dish-img-box img {
+    transform: scale(1.1);
+}
+
+/* ========================================
+   MENU PAGE STYLES
+======================================== */
+
+.menu-hero {
+    min-height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.menu-nav {
+    background: var(--white);
+    border-radius: 60px;
+    padding: 0.5rem;
+    display: inline-flex;
+    gap: 0.5rem;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 3rem;
+}
+
+.menu-nav .nav-link {
+    color: var(--gray) !important;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    transition: var(--transition-smooth);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.menu-nav .nav-link::after {
+    display: none;
+}
+
+.menu-nav .nav-link.active {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--black) !important;
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+}
+
+.menu-item {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.menu-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--gold);
+}
+
+.menu-item-content {
+    flex: 1;
+}
+
+.menu-item h4 {
+    color: var(--black);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.menu-item p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.menu-item-price {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--gold);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.menu-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--gold-dark);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+/* ========================================
+   RESERVATION FORM
+======================================== */
+
+.reservation-hero {
+    min-height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1920') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservation-card {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: var(--shadow-strong);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-floating > label {
+    color: var(--gray);
+}
+
+.form-control,
+.form-select {
+    border: 2px solid var(--cream-dark);
+    border-radius: 15px;
+    padding: 1.2rem 1rem;
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+    background: var(--cream);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.15);
+    background: var(--white);
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+    color: var(--gold);
+}
+
+.time-selector {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.time-btn {
+    padding: 1rem;
+    border: 2px solid var(--cream-dark);
+    border-radius: 15px;
+    background: var(--cream);
+    color: var(--charcoal);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-align: center;
+}
+
+.time-btn:hover {
+    border-color: var(--gold);
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.time-btn.selected {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--black);
+    border-color: var(--gold);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: var(--charcoal);
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.hover-gold {
+    transition: var(--transition-smooth);
+}
+
+.hover-gold:hover {
+    color: var(--gold) !important;
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+    .hero-restaurant h1 {
+        font-size: 2.5rem;
+    }
+    
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .menu-item-price {
+        margin-top: 1rem;
+    }
+    
+    .time-selector {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .reservation-card {
+        padding: 2rem;
+    }
+}
+
+/* ========================================
+   UTILITY CLASSES
+======================================== */
+
+.opacity-25 {
+    opacity: 0.25;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.opacity-75 {
+    opacity: 0.75;
+}
+
+.shadow-sm {
+    box-shadow: var(--shadow-soft) !important;
+}
+
+.rounded-4 {
+    border-radius: 20px !important;
+}
+
+/* AOS Animation Overrides */
+[data-aos] {
+    pointer-events: auto;
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(50px);
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+[data-aos="zoom-in"] {
+    transform: scale(0.9);
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+
+[data-aos="zoom-in"].aos-animate {
+    transform: scale(1);
+    opacity: 1;
+}
+
+[data-aos="fade-down"] {
+    transform: translateY(-50px);
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+
+[data-aos="fade-down"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Success Message */
+.success-message {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeInUp 0.5s ease;
+}
+
+.success-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
